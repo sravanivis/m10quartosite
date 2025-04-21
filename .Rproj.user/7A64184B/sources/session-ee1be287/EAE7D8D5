@@ -3,9 +3,9 @@
     "path": "C:/Users/srava/OneDrive/Desktop/Data Wrangling and Visualization/M09-2-Application-Data-Import-Export/M10 Hands-On Assignment/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "0",
+    "hash": "1328961328",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1745200205219.0,
     "source_on_save": false,
     "relative_order": 2,
@@ -16,11 +16,11 @@
         "scrollLine": "6"
     },
     "folds": "",
-    "lastKnownWriteTime": 1745213981,
+    "lastKnownWriteTime": 1745215797,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1745215027032,
+    "last_content_update": 1745215797709,
     "read_only": false,
     "read_only_alternatives": []
 }
