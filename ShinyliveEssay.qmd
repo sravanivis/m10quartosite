@@ -1,0 +1,40 @@
+---
+title: "Shinylive Essay"
+format:
+  html:
+    dashboard: 
+      orientation: rows
+      theme: cosmo
+---
+
+Shinylive is a way to run Shiny apps entirely in-browser, as opposed to needing a server/software to run it. It is similar to creating a Shiny app, but instead of deploying to a server, you can just publish it like a regular website and it will work. This makes it easier to share and maintain, especially for smaller projects. It is quite different from the Traditional Shiny in multiple ways:
+
+1.  Traditional Shiny requires a server to run, whereas Shinylive runs entirely in browser.
+2.  Shinylive is a little bit limited by CPU whereas Traditional Shiny is more powerful
+3.  Shinylive is easier to set up
+4.  The two have different use cases: Traditional Shiny can be used for dashboards and heavy logic, whereas Shinylive is better for tutorials and demos.
+5.  Shinylive is limited in R packages capabilities.
+
+The following list outlines the pros and cons of Shinylive:
+
+Pros of Shinylive:
+
+-   Cost-effective
+
+-   No server needed
+
+-   Sharing is easier
+
+-   Better for smaller projects
+
+-   works seamlessly with Quarto
+
+Cons of Shinylive:
+
+-   Not good for big data due to browser limitations
+
+-   Lacks full range of R packages
+
+-   Can be laggy if the app is too complex
+
+-   Works clientside - no access to database tools

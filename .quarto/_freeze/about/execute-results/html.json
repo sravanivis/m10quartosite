@@ -1,0 +1,17 @@
+{
+  "hash": "04c93999af19e97975416fbf6897fa34",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Dashboard\"\nformat:\n  html:\n    dashboard: \n      orientation: rows\n      theme: cosmo\n---\n\n\n\n::: panel\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'ggplot2' was built under R version 4.4.3\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(dplyr)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'dplyr' was built under R version 4.4.3\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\n\nAttaching package: 'dplyr'\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n```\n\n\n:::\n:::\n\n\n:::\n\n::: panel\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(mtcars, aes(x = mpg)) +\n  geom_histogram(binwidth = 2, fill = \"skyblue\", color = \"black\") +\n  theme_minimal() +\n  labs(title = \"MPG Distribution\", x = \"Miles per Gallon\", y = \"Frequency\")\n```\n\n::: {.cell-output-display}\n![](about_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n:::\n\n::: panel\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmtcars %>%\n  count(cyl) %>%\n  ggplot(aes(x = factor(cyl), y = n, fill = factor(cyl))) +\n  geom_bar(stat = \"identity\") +\n  theme_minimal() +\n  labs(title = \"Cars by Cylinder Count\", x = \"Cylinders\", y = \"Number of Cars\") +\n  scale_fill_brewer(palette = \"Set2\")\n```\n\n::: {.cell-output-display}\n![](about_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n:::\n\n::: panel\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(mtcars, aes(x = hp, y = mpg, color = factor(cyl))) + \n  geom_point(size = 3) + \n  theme_minimal() + \n  labs(color = \"Cylinders\")\n```\n\n::: {.cell-output-display}\n![](about_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n:::\n\n::: panel\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmtcars %>%\n  group_by(cyl) %>%\n  summarise(\n    Avg_MPG = round(mean(mpg), 1),\n    Avg_HP = round(mean(hp), 1),\n    Count = n()\n  )\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 3 × 4\n    cyl Avg_MPG Avg_HP Count\n  <dbl>   <dbl>  <dbl> <int>\n1     4    26.7   82.6    11\n2     6    19.7  122.      7\n3     8    15.1  209.     14\n```\n\n\n:::\n:::\n\n\n:::\n\n",
+    "supporting": [
+      "about_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

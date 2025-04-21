@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "ShinyliveEssay.html",
+    "href": "ShinyliveEssay.html",
+    "title": "Shinylive Essay",
+    "section": "",
+    "text": "Shinylive is a way to run Shiny apps entirely in-browser, as opposed to needing a server/software to run it. It is similar to creating a Shiny app, but instead of deploying to a server, you can just publish it like a regular website and it will work. This makes it easier to share and maintain, especially for smaller projects. It is quite different from the Traditional Shiny in multiple ways:\n\nTraditional Shiny requires a server to run, whereas Shinylive runs entirely in browser.\nShinylive is a little bit limited by CPU whereas Traditional Shiny is more powerful\nShinylive is easier to set up\nThe two have different use cases: Traditional Shiny can be used for dashboards and heavy logic, whereas Shinylive is better for tutorials and demos.\nShinylive is limited in R packages capabilities.\n\nThe following list outlines the pros and cons of Shinylive:\nPros of Shinylive:\n\nCost-effective\nNo server needed\nSharing is easier\nBetter for smaller projects\nworks seamlessly with Quarto\n\nCons of Shinylive:\n\nNot good for big data due to browser limitations\nLacks full range of R packages\nCan be laggy if the app is too complex\nWorks clientside - no access to database tools"
+  },
+  {
+    "objectID": "Shinyapps.html",
+    "href": "Shinyapps.html",
+    "title": "Shiny Apps Essay",
+    "section": "",
+    "text": "What is Shiny and how does it work?\nShiny is an R package that lets you build web applications directly from R. It can be essentially used to create functional apps with R code rather than using HTML, CSS or JavaScript. It is a popular tool for dashboards/visualization.\nThe Shiny app has two main parts: UI and server, in which you create two variables and then assign them to UI and server. The UI variable will contain all the frontend code changes while the server variable will contain all the backend formulas. Then, you connect them with: shinyApp(ui = [UI variable], server = [server variable]).\nShiny is useful because it can be used to quickly build interactive dashboards and informative visualizations. However, there are some downsides to Shiny as well. Here is a pros and cons list:\nPros:\n\nNo need to learn web development languages/tools\nGood for data-driven apps\nIntegrates will with common R packages\nInteractive and reactive\n\nCons:\n\nRequires server\nCan lag if datasets are too large\nNeeds R running for backend\n\nOverall, Shiny is an incredibly tool to use for visualization and dashboarding. This makes it a great tool for academic research and small scale work projects."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Dashboard",
+    "section": "",
+    "text": "library(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\nlibrary(dplyr)\n\nWarning: package 'dplyr' was built under R version 4.4.3\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\nggplot(mtcars, aes(x = mpg)) +\n  geom_histogram(binwidth = 2, fill = \"skyblue\", color = \"black\") +\n  theme_minimal() +\n  labs(title = \"MPG Distribution\", x = \"Miles per Gallon\", y = \"Frequency\")\n\n\n\n\n\n\n\n\n\n\n\nmtcars %&gt;%\n  count(cyl) %&gt;%\n  ggplot(aes(x = factor(cyl), y = n, fill = factor(cyl))) +\n  geom_bar(stat = \"identity\") +\n  theme_minimal() +\n  labs(title = \"Cars by Cylinder Count\", x = \"Cylinders\", y = \"Number of Cars\") +\n  scale_fill_brewer(palette = \"Set2\")\n\n\n\n\n\n\n\n\n\n\n\nggplot(mtcars, aes(x = hp, y = mpg, color = factor(cyl))) + \n  geom_point(size = 3) + \n  theme_minimal() + \n  labs(color = \"Cylinders\")\n\n\n\n\n\n\n\n\n\n\n\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarise(\n    Avg_MPG = round(mean(mpg), 1),\n    Avg_HP = round(mean(hp), 1),\n    Count = n()\n  )\n\n# A tibble: 3 × 4\n    cyl Avg_MPG Avg_HP Count\n  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;\n1     4    26.7   82.6    11\n2     6    19.7  122.      7\n3     8    15.1  209.     14"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sravani Viswanadha",
+    "section": "",
+    "text": "Hello! I’m Sravani, a current MBA student at Cal Poly Pomona.\nMy unique skillset comes from a variety of work and school experience. In 2022, I interned at Inclusive World, an organization that works with differently abled individuals in the Bay Area. I worked on Data Management, primarily focusing on re-organizing the 10 years’ worth of financial data for the organization to prepare for integration with Salesforce. During this time, I also trained an intern in Microsoft Excel shortcuts, exercising my love for teaching and helping.\nThe internship further enforced my interest in this field, and I went on to declare my major as Business Administration with a concentration in Information Systems, and learned various tools such as Python, MS Access, mySQL, SAP Hana, SwiftUI and MS Project. In my final year of undergraduate coursework, I worked as a quantitative business tutor at San Francisco State University, where I tutored business students who needed extra help in learning how to use these tools. In 2023, I obtained a B.S. In Business Administration-Information Systems, as well as an SAP Student Recognition Award. I also obtained a Business Innovation Award and won 3rd place in the SFSU CS Pitch Competition for my original business application idea, GigReg, which uses my love for technology and music to bridge a major gap in the music industry.\nI started the MBA program at Cal Poly Pomona in Fall 2023, learning about many new interesting business topics, such as Operations and Supply Chain, Business and Law, and Data Analysis and Modeling. Most recently, I began working as a Data Analyst at Cal Poly Pomona ASI, where I streamline processes for the operations team, as well as generate reports and dashboards, analyze qualitative and quantitative data, and create work forms. Currently, I am using Microsoft’s DBMS system, Access, for building and implementing a new reporting system for the financial services team, which will be used temporarily as I research into new ERP systems that better suit organizational needs.\nIn my spare time, I enjoy learning new musical instruments that support my passion for songwriting. I currently sing and play the guitar and bass, and I have played various instruments throughout middle school, high school and college. I hope to continue balancing my interests in music and technology as I advance in my career. I’m always looking to expand my network, so please feel free to reach out and connect!"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Sravani Viswanadha",
+    "section": "Education",
+    "text": "Education\nCalifornia State Polytechnic University | Pomona, CA | 2023 - 2025\nSan Francisco State University | San Francisco, CA | 2020 - 2023"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Sravani Viswanadha",
+    "section": "Experience",
+    "text": "Experience\nAssociated Students Inc. @ CPP | Data Analyst | Jul 2024 - Present\nSFSU TASC | Quantitative Business Tutor | Feb 2023 - May 2023\nInclusive World | Data Management Intern | Jul 2022 - Sep 2022"
+  },
+  {
+    "objectID": "Shinylive.html",
+    "href": "Shinylive.html",
+    "title": "Essay on Shinylive",
+    "section": "",
+    "text": "Shinylive is a way to run Shiny apps entirely in-browser, as opposed to needing a server/software to run it. It is similar to creating a Shiny app, but instead of deploying to a server, you can just publish it like a regular website and it will work. This makes it easier to share and maintain, especially for smaller projects. It is quite different from the Traditional Shiny in multiple ways:\n\nTraditional Shiny requires a server to run, whereas Shinylive runs entirely in browser.\nShinylive is a little bit limited by CPU whereas Traditional Shiny is more powerful\nShinylive is easier to set up\nThe two have different use cases: Traditional Shiny can be used for dashboards and heavy logic, whereas Shinylive is better for tutorials and demos.\nShinylive is limited in R packages capabilities.\n\nThe following list outlines the pros and cons of Shinylive:\nPros of Shinylive:\n\nCost-effective\nNo server needed\nSharing is easier\nBetter for smaller projects\nworks seamlessly with Quarto\n\nCons of Shinylive:\n\nNot good for big data due to browser limitations\nLacks full range of R packages\nCan be laggy if the app is too complex\nWorks clientside - no access to database tools"
+  }
+]

@@ -1,0 +1,36 @@
+---
+title: "Shiny Apps Essay"
+format:
+  html:
+    dashboard: 
+      orientation: rows
+      theme: cosmo
+---
+
+### What is Shiny and how does it work?
+
+Shiny is an R package that lets you build web applications directly from R. It can be essentially used to create functional apps with R code rather than using HTML, CSS or JavaScript. It is a popular tool for dashboards/visualization.
+
+The Shiny app has two main parts: UI and server, in which you create two variables and then assign them to UI and server. The UI variable will contain all the frontend code changes while the server variable will contain all the backend formulas. Then, you connect them with: shinyApp(ui = \[UI variable\], server = \[server variable\]).
+
+Shiny is useful because it can be used to quickly build interactive dashboards and informative visualizations. However, there are some downsides to Shiny as well. Here is a pros and cons list:
+
+Pros:
+
+-   No need to learn web development languages/tools
+
+-   Good for data-driven apps
+
+-   Integrates will with common R packages
+
+-   Interactive and reactive
+
+Cons:
+
+-   Requires server
+
+-   Can lag if datasets are too large
+
+-   Needs R running for backend
+
+Overall, Shiny is an incredibly tool to use for visualization and dashboarding. This makes it a great tool for academic research and small scale work projects.

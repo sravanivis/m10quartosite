@@ -1,0 +1,59 @@
+---
+title: "Dashboard"
+format:
+  html:
+    dashboard: 
+      orientation: rows
+      theme: cosmo
+---
+
+::: panel
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+:::
+
+::: panel
+```{r}
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(binwidth = 2, fill = "skyblue", color = "black") +
+  theme_minimal() +
+  labs(title = "MPG Distribution", x = "Miles per Gallon", y = "Frequency")
+
+```
+:::
+
+::: panel
+```{r}
+mtcars %>%
+  count(cyl) %>%
+  ggplot(aes(x = factor(cyl), y = n, fill = factor(cyl))) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(title = "Cars by Cylinder Count", x = "Cylinders", y = "Number of Cars") +
+  scale_fill_brewer(palette = "Set2")
+```
+:::
+
+::: panel
+```{r}
+ggplot(mtcars, aes(x = hp, y = mpg, color = factor(cyl))) + 
+  geom_point(size = 3) + 
+  theme_minimal() + 
+  labs(color = "Cylinders")
+```
+:::
+
+::: panel
+```{r}
+mtcars %>%
+  group_by(cyl) %>%
+  summarise(
+    Avg_MPG = round(mean(mpg), 1),
+    Avg_HP = round(mean(hp), 1),
+    Count = n()
+  )
+```
+:::
+
